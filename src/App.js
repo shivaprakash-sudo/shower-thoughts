@@ -1,12 +1,12 @@
-import "./App.css";
 import Navbar from "./Navbar";
+import Home from "./Home";
 
 function App() {
-  const mainTitle = "Welcome to Shower Thoughts!";
   return (
     <div className="App">
-      <div className="content">
-        <h1>{mainTitle}</h1>
+      <Navbar />
+      <div className="content container">
+        <Home />
       </div>
     </div>
   );

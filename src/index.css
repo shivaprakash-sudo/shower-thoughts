@@ -16,6 +16,10 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
+p {
+    line-height: 1.7;
+}
+
 ul {
     list-style: none;
 }
@@ -31,11 +35,17 @@ a:hover {
 
 /* utility classes */
 
+
+/* common container */
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 2%;
 }
+
+
+/* text alignment classes */
 
 .txt-center {
     text-align: center;
@@ -44,6 +54,9 @@ a:hover {
 .txt-left {
     text-align: left;
 }
+
+
+/* button classes */
 
 .btn {
     margin: 0.7em 0;
@@ -114,7 +127,7 @@ a:hover {
 /* blog preview */
 
 .blog-preview {
-    padding: 0.6em 1em;
+    padding: 1.5em;
     border-bottom: 1px solid #ccc;
     margin: 0.5em 0;
 }
@@ -122,7 +135,7 @@ a:hover {
 .blog-preview:hover {
     transform: scale(1.01);
     border-radius: 10px;
-    box-shadow: -1px -3px 8px #ccc;
+    box-shadow: -1px -3px 8px #ccc, 1px 3px 8px #ccc;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -146,6 +159,7 @@ a:hover {
 }
 
 .blog-heading {
+    margin-bottom: 0.7em;
     font-size: 1.5em;
     color: var(--greenish-cyan-theme);
 }
@@ -165,7 +179,7 @@ a:hover {
         display: flex;
     }
     .nav {
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
     .nav h1 {

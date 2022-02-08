@@ -14,11 +14,11 @@ To run this app, you need to have the latest version of `Node.js`.
 
 [Download Node.js](https://nodejs.org/en/download/) if you don't have it.
 
-Now, Fork or Clone this repo into your local machine and run the following command to download the required dependencies.
+Now, Fork or Clone this repo into your local machine and run the following command in the terminal to download the required dependencies.
 
 ### `npm install`
 
-This will all the dependencies listed in the `package.json` file.
+This will download all the dependencies listed in the `package.json` file.
 
 Now that you have everything ready, use the following command to start the app.
 

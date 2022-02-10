@@ -63,6 +63,13 @@ a:hover {
 }
 
 
+/* display classes */
+
+.d-block {
+    display: block;
+}
+
+
 /* button classes */
 
 .btn {
@@ -186,9 +193,17 @@ a:hover {
 } */
 
 
-/* post form styles */
+/* post a thought form styles */
+
+.post-a-thought-container {
+    max-width: 400px;
+}
 
 .post-form-heading {
+    margin-bottom: 1em;
+}
+
+.form label {
     margin-bottom: 1em;
 }
 

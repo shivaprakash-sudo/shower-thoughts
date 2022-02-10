@@ -5,12 +5,16 @@ const PostAThought = () => {
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Shiva");
   return (
-    <div className="post-a-thought txt-center">
-      <h2 className="post-form-heading">Post a shower thought</h2>
-      <form action="">
+    <div className="post-a-thought-container m-auto">
+      <h2 className="post-form-heading txt-center">Post a shower thought</h2>
+      <form className="form" action="">
         <div className="blog-title-container">
-          <label htmlFor="blog-title">Blog Title: </label>
+          <label className="d-block" htmlFor="blog-title">
+            Blog Title:
+          </label>
           <input
+            id="blog-title"
+            className="d-block"
             type="text"
             name="blog-title"
             required
@@ -21,8 +25,12 @@ const PostAThought = () => {
           />
         </div>
         <div className="blog-body-container">
-          <label htmlFor="blog-body">Blog Title: </label>
+          <label className="d-block" htmlFor="blog-body">
+            Blog Title:
+          </label>
           <textarea
+            id="blog-body"
+            className="d-block"
             name="blog-body"
             required
             value={body}

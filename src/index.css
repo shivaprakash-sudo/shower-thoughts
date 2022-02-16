@@ -188,11 +188,6 @@ a:hover {
 }
 
 
-/* .blog-author {
-    float: right;
-} */
-
-
 /* post a thought form styles */
 
 .post-a-thought-container {
@@ -207,6 +202,23 @@ a:hover {
     margin-bottom: 1em;
 }
 
+/* 404 error page */
+
+.not-found {
+    padding: 1.5em;
+}
+
+.not-found hr {
+    width: 50%;
+    color: var(--greenish-cyan-theme);
+}
+
+.heading-404 {
+    font-size: 3rem;
+}
+.not-found p {
+    margin: 1em 0;
+}
 
 /* responsive design */
 
@@ -233,5 +245,8 @@ a:hover {
     .nav-list--item:last-child {
         margin-top: 0;
         margin-left: 1em;
+    }
+    .heading-404 {
+        font-size: 5rem;
     }
 }

@@ -1,13 +1,38 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const PostAThought = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Shiva");
+  const [isPending, setIsPending] = useState(false);
+  const history = useHistory();
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    const blog = {
+      title,
+      body,
+      author
+    }
+
+    setIsPending(true);
+
+    fetch("http://localhost:8000/blogs", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(blog)
+    }).then(()=>{
+      console.log("New blog added!");
+      setIsPending(false);
+      history.push("/");
+    })
+  }
+
   return (
     <div className="post-a-thought-container m-auto">
       <h2 className="post-form-heading txt-center">Post a shower thought</h2>
-      <form className="form" action="">
+      <form onSubmit={handleSubmit} className="form" action="">
         <div className="blog-title-container">
           <label className="d-block" htmlFor="blog-title">
             Blog Title:
@@ -55,9 +80,15 @@ const PostAThought = () => {
           </select>
         </div>
         <div className="btn-submit">
-          <button className="btn btn-theme" type="submit">
+          {isPending ? 
+          (<button disabled className="btn btn-theme" type="submit">
+          Posting...
+        </button>)
+          :
+          (<button className="btn btn-theme" type="submit">
             Post your thought
-          </button>
+          </button>)
+}
         </div>
       </form>
     </div>

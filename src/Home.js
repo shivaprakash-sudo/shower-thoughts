@@ -7,12 +7,6 @@ const Home = () => {
     error,
   } = useFetch("http://localhost:8000/blogs");
 
-  // delete blog and set the remaining blogs to the state;
-  //   const handleDeleteBlog = (id) => {
-  //     const newBlogs = blogs.filter((blog) => blog.id !== id);
-  //     setBlogs(newBlogs);
-  //   };
-
   return (
     <div className="container home">
       <div className="blogs">

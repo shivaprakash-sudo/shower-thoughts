@@ -51,7 +51,7 @@ const PostAThought = () => {
         </div>
         <div className="blog-body-container">
           <label className="d-block" htmlFor="blog-body">
-            Blog Title:
+            Blog Body:
           </label>
           <textarea
             id="blog-body"
@@ -66,26 +66,22 @@ const PostAThought = () => {
         </div>
         <div className="author">
           <label htmlFor="author">Author: </label>
-          <select
+          <input
             name="author"
             id="author"
             value={author}
             onChange={(e) => {
               setAuthor(e.target.value);
             }}
-          >
-            <option value="Shiva">Shiva</option>
-            <option value="Niketh">Niketh</option>
-            <option value="Jay">Jay</option>
-          </select>
+          />
         </div>
-        <div className="btn-submit">
+        <div className="btn-submit txt-center">
           {isPending ? 
-          (<button disabled className="btn btn-theme" type="submit">
+          (<button disabled className="btn" type="submit">
           Posting...
         </button>)
           :
-          (<button className="btn btn-theme" type="submit">
+          (<button className="btn" type="submit">
             Post your thought
           </button>)
 }

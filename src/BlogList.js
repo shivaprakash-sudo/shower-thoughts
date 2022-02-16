@@ -10,7 +10,7 @@ const BlogList = ({ blogs, title }) => {
             <h3 className="blog-heading">{blog.title}</h3>
           </Link>
           <small className="blog-author">
-            Posted by:
+            Posted by: &nbsp;
             {blog.author}
           </small>
         </div>
